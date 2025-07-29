@@ -6,6 +6,10 @@ namespace WebService
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //Подключение MVC для поддержки контроллеров
+            builder.Services.AddControllersWithViews();
+            builder.Services.AddOpenApi();
+
             // Add services to the container.
             builder.Services.AddRazorPages();
 
