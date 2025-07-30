@@ -26,6 +26,21 @@ namespace WebService.Controllers
 
             return Ok(platforms);
         }
+
+        [HttpPost("load")]
+        public IActionResult LoadPlatforms([FromBody] string filePath)
+        {
+            try
+            {
+                service.LoadAFromFile(filePath);
+                return Ok("Platforms add successfully");
+            }
+            catch (Exception ex) 
+            { 
+                return BadRequest("Error loading : " +  ex.Message);
+            }
+        }
+
         public IActionResult Index()
         {
             return View();

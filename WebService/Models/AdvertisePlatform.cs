@@ -2,13 +2,13 @@
 {
     public class AdvertisePlatform
     {
+        public string Location { get; set; }
         public string Name { get; set; }
-        public List<string> Locations { get; set; }
 
-        public AdvertisePlatform(string name, List<string> locations)
+        public AdvertisePlatform(string name, string location)
         {
             Name = name;
-            Locations = locations;
+            Location = location;
         }
     }
 }
