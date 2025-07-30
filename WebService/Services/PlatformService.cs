@@ -27,9 +27,13 @@ namespace WebService.Services
             }
         }
 
-        public List<string> GetLocation(string location)
+        public string[] GetLocation(string location)
         {
-            throw new NotImplementedException();
+            if (platforms.TryGetValue(location, out var pls))
+            {
+                return pls.Select(ap => ap.Name).ToArray();
+            }
+            return null;
         }
     }
 }

@@ -32,7 +32,7 @@ namespace WebService.Controllers
         {
             try
             {
-                service.LoadAFromFile(filePath);
+                service.LoadFromFile(filePath);
                 return Ok("Platforms add successfully");
             }
             catch (Exception ex) 
